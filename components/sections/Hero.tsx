@@ -74,7 +74,7 @@ export default function Hero() {
             {/* Kontener ze zdjęciem */}
             <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden border-[6px] border-white shadow-2xl bg-slate-100">
               <Image 
-                src="/images/Ogarnij Hiszpański.jpg" 
+                src="/images/hero-cartoon-chat.jpg" 
                 alt="Agata Piątek - Mentorka Twojego Hiszpańskiego" 
                 fill
                 className="object-cover object-top hover:scale-105 transition-transform duration-700" 
