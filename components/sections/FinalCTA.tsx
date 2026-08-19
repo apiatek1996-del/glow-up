@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { ArrowRight, Sparkles } from "lucide-react";
-import MailerLiteForm from "../ui/MailerLiteForm";
 
 export default function FinalCTA() {
   return (
@@ -11,17 +10,29 @@ export default function FinalCTA() {
         <Sparkles className="w-12 h-12 text-yellow-200 mx-auto mb-6" />
         
         <h2 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-8 leading-tight">
-          Więc czy możemy wreszcie pożegnać zgadywanie, nad czym pracować?
+          W głowie umiesz więcej hiszpańskiego, niż potrafisz użyć w rozmowie?
         </h2>
         
-        <p className="text-xl text-white/90 md:text-2xl mb-10 font-light max-w-2xl mx-auto">
-          Twój hiszpański nie idzie do przodu, bo nie wiesz, na którym etapie jesteś.
-          <br/><br/>
-          <strong className="text-white bg-slate-900/20 px-4 py-1 rounded-full italic font-semibold">6 pytań da Ci tą jasność.</strong>
-        </p>
+        <div className="text-xl text-white/90 md:text-2xl mb-10 font-light max-w-2xl mx-auto space-y-6">
+          <p>
+            Sprawdź, co blokuje Twój hiszpański i wreszcie zacznij wykorzystywać to, czego już się nauczyłaś.
+          </p>
+          <p className="font-semibold italic text-slate-900 bg-white/10 px-6 py-3 rounded-2xl w-fit mx-auto">
+            Nie kolejna lekcja. Nie kolejny kurs.
+          </p>
+          <p className="font-bold">
+            RTG Twojego hiszpańskiego + konkretny plan, co robić dalej.
+          </p>
+        </div>
 
-        <div id="zapis" className="mt-8 max-w-lg mx-auto relative z-20 text-left">
-          <MailerLiteForm />
+        <div className="mt-8 max-w-lg mx-auto relative z-20 text-center">
+          <a 
+            href="#cennik" 
+            className="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-lg font-bold py-4 px-8 rounded-full shadow-2xl hover:shadow-slate-900/25 transition-all duration-300 transform hover:-translate-y-0.5 w-full sm:w-auto"
+          >
+            Chcę zrobić GLOW UP mojego hiszpańskiego
+            <ArrowRight className="w-5 h-5" />
+          </a>
         </div>
       </div>
 
@@ -31,7 +42,7 @@ export default function FinalCTA() {
         {/* Dymek */}
         <div className="relative z-30 bg-white text-slate-900 px-5 py-3 rounded-[1.5rem] rounded-br-sm shadow-xl -mb-6 max-w-[200px] rotate-[-3deg] translate-x-2 translate-y-4">
           <p className="font-bold text-base font-heading text-primary leading-tight mb-0.5">Mam plan!</p>
-          <p className="text-xs font-medium leading-snug">Chodź, zobaczymy się po drugiej stronie testu. 😊</p>
+          <p className="text-xs font-medium leading-snug">Chodź, popracujemy nad Twoim hiszpańskim. 😊</p>
         </div>
         
         {/* Avatar - wycięte zdjęcie */}

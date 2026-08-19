@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-medium">
-          <p>© {new Date().getFullYear()} Agata Piątek. RTG Twojego Hiszpańskiego.</p>
+          <p>© {new Date().getFullYear()} Agata Piątek. Glow Up Twojego Hiszpańskiego.</p>
           <div className="flex gap-6">
             <a href="https://ohiszpanski.pl/polityka-prywatnosci/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Polityka prywatności</a>
             <a href="https://docs.google.com/document/d/1fZxywdbv-IiaTApd_8Tdx3gE68b_QNFjMV_pbQj9y64/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Regulamin</a>

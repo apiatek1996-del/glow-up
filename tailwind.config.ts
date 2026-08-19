@@ -30,7 +30,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-poppins)", "sans-serif"],
-        heading: ["var(--font-baskerville)", "serif"],
+        heading: ["var(--font-lora)", "serif"],
       },
     },
   },

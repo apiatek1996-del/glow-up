@@ -9,25 +9,49 @@ export default function FAQ() {
 
   const faqs = [
     {
-      q: 'Co się stanie z moimi odpowiedziami? Czy będziesz mi potem wysyłać spam?',
-      a: 'Twoje odpowiedzi służą tylko do wygenerowania diagnozy. Nikt ich nie zobaczy. Dostajesz wynik i jeśli chcesz się do mnie odezwać, robisz to i wtedy działamy dalej. Jeśli nie Twoje odpowiedzi i wynik zostają tylko dla Ciebie.'
+      q: 'Czy to jest lekcja hiszpańskiego?',
+      a: 'Nie. To diagnoza Twojej aktualnej sytuacji + indywidualne zalecenia dotyczące dalszej nauki.'
     },
     {
-      q: 'Ile czasu zajmuje ten test?',
-      a: '6 pytań, każde to jedno kliknięcie. Maksymalnie 3 minuty. Wynik dostajesz od razu.'
+      q: 'Czy muszę przygotować się do konsultacji?',
+      a: 'Nie musisz robić żadnych specjalnych ćwiczeń. Przed spotkaniem dostaniesz formularz, dzięki któremu poznam Twoją historię z hiszpańskim, cele i trudności.'
     },
     {
-      q: 'A co jeśli wyjdzie mi, że jestem na początku? Będę się czuła źle?',
-      a: 'Przeciwnie — poczujesz ulgę. Będziesz wiedziała gdzie jesteś i na czym się teraz najlepiej skupić. Diagnoza to nie wyrok, to mapa wyjścia z labiryntu.'
+      q: 'Czy GLOW UP jest dla mnie, jeśli nie mieszkam w Hiszpanii?',
+      a: 'Tak. Kluczowe jest to, na jakim jesteś etapie, czego potrzebujesz i co chcesz osiągnąć.'
     },
     {
-      q: 'Czy to jeden z tych testów, gdzie każdy dostaje ten sam wynik?',
-      a: 'Mam 5 różnych diagnoz opartych na pracy z 200+ osobami. Każda to konkretne wskazówki dla Twojego etapu, nie ogólnikowe "ucz się więcej".'
+      q: 'A jeśli mam już mnóstwo materiałów do nauki?',
+      a: 'Tym lepiej. Nie zawsze potrzebujesz kolejnych. Podczas GLOW UP możesz dowiedzieć się, jak lepiej wykorzystać te, które już masz.'
+    },
+    {
+      q: 'Co jeśli nie wiem, co właściwie mnie blokuje?',
+      a: 'To właśnie jeden z powodów, dla których powstał GLOW UP. Nie musisz znać odpowiedzi przed konsultacją.'
+    },
+    {
+      q: 'Kiedy dostanę swoje materiały i zalecenia?',
+      a: 'Wstępne zalecenia otrzymasz jeszcze tego samego dnia. Pełne podsumowanie, indywidualne zalecenia i materiały na pierwszy miesiąc dostaniesz maksymalnie w ciągu 7 dni od konsultacji.'
+    },
+    {
+      q: 'Co jeśli żaden z dostępnych terminów mi nie pasuje?',
+      a: 'Spokojnie ustalimy termin, który będzie pasował nam obu. Jeśli mimo prób w ciągu 2 tygodni nie uda nam się znaleźć wspólnego terminu i zdecydujesz się zrezygnować z konsultacji, zwrócę Ci pieniądze.'
+    },
+    {
+      q: 'Czy po GLOW UP zostanę sama z zaleceniami?',
+      a: 'W wersji GLOW UP otrzymujesz wszystko, czego potrzebujesz, żeby zacząć działać samodzielnie. Jeśli chcesz dodatkowego wsparcia, wybierz GLOW UP PREMIUM, w którym przez 3 miesiące możesz konsultować swoje wątpliwości.'
+    },
+    {
+      q: 'Co dokładnie dostaję w Premium?',
+      a: 'Wszystko z GLOW UP + 3 miesiące wsparcia, kontakt przez aplikację, dostęp do Strefy Hiszpański i Klubu Hiszpański Todos Los Días, brak limitu pytań i odpowiedzi do 24 godzin.'
+    },
+    {
+      q: 'A co jeśli nie będę miała czasu wdrożyć zaleceń?',
+      a: 'Właśnie dlatego podczas konsultacji nie będziemy układać planu idealnego na papierze, ale niemożliwego do zrealizowania w Twoim życiu. Ustalimy, co możesz realnie robić i jak wpleść hiszpański w swoją codzienność, żeby nauka była możliwa do utrzymania. Bo lepsze 15 minut regularnej, dobrze dobranej pracy niż 2 godziny ambitnego planu, którego nie uda Ci się zrealizować.'
     }
   ];
 
   return (
-    <section className="bg-slate-50 py-20 md:py-32 relative overflow-hidden">
+    <section id="faq" className="bg-slate-50 py-20 md:py-32 relative overflow-hidden">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center mb-12">
@@ -42,10 +66,10 @@ export default function FAQ() {
                />
             </div>
           <h2 className="font-heading font-bold text-3xl md:text-5xl text-slate-900 mb-6 leading-tight">
-            FAQ
+            Zanim zrobisz GLOW UP — kilka ważnych odpowiedzi.
           </h2>
           <p className="text-xl text-slate-600 mb-10 italic">
-            Już odpowiadam
+            Najczęściej zadawane pytania
           </p>
         </div>
 

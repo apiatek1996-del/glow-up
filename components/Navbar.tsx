@@ -5,11 +5,11 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-bold font-heading text-xl shadow-md group-hover:bg-indigo-700 transition-colors">
-            M
+          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-bold font-heading text-xl shadow-md group-hover:bg-primary-hover transition-colors">
+            A
           </div>
           <span className="font-heading font-bold text-xl text-slate-900 tracking-tight group-hover:text-primary transition-colors">
-            MojaStrona
+            Ada
           </span>
         </Link>
         
@@ -17,8 +17,14 @@ export default function Navbar() {
           <Link href="#about" className="text-slate-600 hover:text-primary font-medium transition-colors">
             O mnie
           </Link>
-          <Link href="#zapis" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-semibold rounded-full text-white bg-primary hover:bg-primary-hover shadow-sm transition-all duration-300">
-            Sprawdź swój poziom
+          <Link href="#jak-to-dziala" className="text-slate-600 hover:text-primary font-medium transition-colors">
+            Jak to działa
+          </Link>
+          <Link href="#faq" className="text-slate-600 hover:text-primary font-medium transition-colors">
+            FAQ
+          </Link>
+          <Link href="#cennik" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-semibold rounded-full text-white bg-primary hover:bg-primary-hover shadow-sm transition-all duration-300">
+            Zrób GLOW UP
           </Link>
         </nav>
 
