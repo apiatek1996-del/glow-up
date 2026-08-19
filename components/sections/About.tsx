@@ -63,10 +63,6 @@ export default function About() {
 
           {/* Prawa strona - Teksty, Dowody i Karuzela (6 z 12) */}
           <div className="lg:col-span-6 flex flex-col justify-center text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-warm-orange/10 text-warm-orange font-bold text-xs mb-6 w-fit uppercase tracking-wider">
-              <Award className="w-3.5 h-3.5" />
-              <span>O autorce</span>
-            </div>
             
             <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-slate-900 mb-8 leading-tight">
               Cześć, jestem Agata!
