@@ -60,21 +60,6 @@ export default function PainPoints() {
 
         </div>
 
-        {/* Duże podsumowanie z puentą w formie kontrastowej, jasnej karty */}
-        <div className="max-w-4xl mx-auto mt-20 bg-white text-slate-900 p-8 sm:p-10 rounded-2xl shadow-2xl relative overflow-hidden transition-all hover:scale-[1.01]">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
-          <div className="flex gap-4 items-start relative z-10">
-            <AlertCircle className="w-8 h-8 text-primary shrink-0 mt-0.5" />
-            <div>
-              <h3 className="font-heading font-extrabold text-xl md:text-2xl text-slate-900 mb-2 leading-tight">
-                To nie wina Twojego braku talentu.
-              </h3>
-              <p className="text-slate-500 font-semibold text-xs md:text-sm leading-relaxed">
-                Po prostu nie potrzebujesz WIĘCEJ tego samego rodzaju nauki. Potrzebujesz precyzyjnie <strong className="text-primary">dopasowanej diagnostyki</strong> i spersonalizowanego planu na Twoim aktualnym etapie.
-              </p>
-            </div>
-          </div>
-        </div>
 
       </div>
     </section>
