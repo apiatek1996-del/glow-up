@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Hero from "../../components/sections/Hero";
 import PainPoints from "../../components/sections/PainPoints";
+import Solution from "../../components/sections/Solution";
 import WhatYouGet from "../../components/sections/WhatYouGet";
 import About from "../../components/sections/About";
-import Solution from "../../components/sections/Solution";
 import MethodWorks from "../../components/sections/MethodWorks";
+import PremiumSupport from "../../components/sections/PremiumSupport";
 import Pricing from "../../components/sections/Pricing";
 import FAQ from "../../components/sections/FAQ";
 import FinalCTA from "../../components/sections/FinalCTA";
@@ -43,10 +44,11 @@ export default function MarketingPage() {
       />
       <Hero />
       <PainPoints />
+      <Solution />
       <WhatYouGet />
       <About />
-      <Solution />
       <MethodWorks />
+      <PremiumSupport />
       <Pricing />
       <FAQ />
       <FinalCTA />
@@ -54,4 +56,3 @@ export default function MarketingPage() {
     </main>
   );
 }
-

@@ -1,30 +1,38 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #E89D4F;
-  --color-primary-hover: #D48639;
-  --color-primary-light: #F7B46E;
+  --color-primary: #D584C8; /* Różowy/Pink jako główny akcent */
+  --color-primary-hover: #C26FB5;
+  --color-primary-light: #FDF4FC;
   
-  --color-brand-pink: #D584C8;
+  --color-brand-indigo: #7C3AED; /* Fiolet/Indigo */
+  --color-brand-indigo-hover: #6D28D9;
   --color-brand-green: #06B050;
   
-  --color-background: #FFF8EA;
-  --color-background-dark: #F0E7D8;
+  /* Słoneczne, ciepłe kolory do rozjaśnienia strony - całkowity brak zimnego szarego */
+  --color-warm-sun: #FFFDF0; /* Ciepły kremowy / słoneczny */
+  --color-warm-sun-dark: #FEF9C3; /* Pastelowy żółty */
+  --color-warm-orange-light: #FFF7ED; /* Jasny pomarańczowy pastel */
+  --color-warm-orange: #E89D4F; /* Ciepły słoneczny pomarańcz */
+  --color-warm-orange-hover: #D48639;
+  
+  --color-background: #FFFDF5; /* CIEPŁY KREM zamiast zimnego szarego #F4F4F4 */
+  --color-background-dark: #FFF7ED; /* Jasnopomarańczowy zamiast szarego */
   --color-background-light: #FFFFFF;
   
-  --color-slate-900: #27272A;
-  --color-slate-800: #3F3F46;
-  --color-slate-700: #52525B;
-  --color-slate-600: #52525B;
-  --color-slate-500: #71717A;
-  --color-slate-400: #A1A1AA;
-  --color-slate-300: #D4D4D8;
-  --color-slate-200: #E4E4E7;
-  --color-slate-100: #F4F4F5;
-  --color-slate-50:  #FAFAFA;
+  --color-slate-900: #1E293B;
+  --color-slate-800: #334155;
+  --color-slate-700: #475569;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748B;
+  --color-slate-400: #94A3B8;
+  --color-slate-300: #CBD5E1;
+  --color-slate-200: #FFE4E6; /* Ciepły różowy zamiast szarego */
+  --color-slate-105: #FFF7ED;
+  --color-slate-50:  #FFFDF5;
 
-  --font-sans: var(--font-poppins, sans-serif);
-  --font-heading: var(--font-lora, Lora, serif);
+  --font-sans: var(--font-montserrat, sans-serif);
+  --font-heading: var(--font-playfair, serif);
 }
 
 @layer base {

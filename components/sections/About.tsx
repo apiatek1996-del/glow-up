@@ -1,144 +1,185 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
-import { Award, GraduationCap, Heart, Calendar, Languages, Users, Compass } from "lucide-react";
+import { Award, GraduationCap, Calendar, Languages, Users, MapPin, Heart, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function About() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const images = [
+    "/images/1.png",
+    "/images/2.png",
+    "/images/4.png",
+    "/images/5.png",
+    "/images/6.png",
+    "/images/7.png",
+    "/images/8.png",
+    "/images/9.png",
+    "/images/10.png",
+    "/images/11.png"
+  ];
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
   const credentials = [
-    {
-      icon: <GraduationCap className="w-5 h-5 text-primary" />,
-      text: "Magister filologii hiszpańskiej"
-    },
-    {
-      icon: <Languages className="w-5 h-5 text-primary" />,
-      text: "Ponad 13 lat z hiszpańskim"
-    },
-    {
-      icon: <Calendar className="w-5 h-5 text-primary" />,
-      text: "Ponad 7 lat doświadczenia w nauczaniu"
-    },
-    {
-      icon: <Users className="w-5 h-5 text-primary" />,
-      text: "Dziesiątki osób, z którymi pracowałam"
-    },
-    {
-      icon: <Compass className="w-5 h-5 text-primary" />,
-      text: "Prawie 5 lat życia w Hiszpanii"
-    }
+    { icon: <GraduationCap className="w-5 h-5 text-warm-orange" />, text: "Magister filologii hiszpańskiej" },
+    { icon: <Languages className="w-5 h-5 text-warm-orange" />, text: "Ponad 13 lat z hiszpańskim" },
+    { icon: <Calendar className="w-5 h-5 text-warm-orange" />, text: "Ponad 7 lat nauczania innych" },
+    { icon: <MapPin className="w-5 h-5 text-warm-orange" />, text: "Prawie 5 lat życia w Hiszpanii" }
   ];
 
   return (
-    <section id="about" className="bg-white py-20 md:py-32 relative overflow-hidden">
-      {/* Tła dekoracyjne */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-pink/5 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-yellow-400/10 rounded-full blur-[100px] pointer-events-none"></div>
+    <section id="about" className="bg-warm-sun py-20 md:py-32 relative overflow-hidden">
+      {/* Słoneczny rozbłysk w tle */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-warm-orange/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl px-6 mx-auto relative z-10">
         
-        {/* Górna część - Zaufanie to dowody */}
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mb-24">
+        {/* Górna część - O mnie & Dowody */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
           
-          {/* Lewa strona - Zdjęcie Ady */}
-          <div className="w-full lg:w-2/5 order-2 lg:order-1">
-            <div className="relative">
-              {/* Dekoracyjna żółta ramka */}
-              <div className="absolute inset-0 bg-yellow-300 rounded-[2.5rem] translate-x-4 translate-y-4 -z-10 shadow-lg"></div>
-              
-              <div className="aspect-[3/4] rounded-[2.5rem] overflow-hidden bg-slate-200 border-4 border-white shadow-2xl relative">
-                <Image 
-                  src="/images/about-photo.jpg" 
-                  alt="Agata Piątek – założycielka i mentorka języka hiszpańskiego" 
-                  width={400}
-                  height={533}
-                  className="w-full h-full object-cover object-top" 
-                  priority
-                />
-              </div>
-
-              {/* Pływająca plakietka */}
-              <div className="absolute -left-6 top-1/3 bg-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3 z-20 border border-slate-100">
-                <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-primary font-bold text-lg">
-                  7
-                </div>
-                <div>
-                  <p className="text-xs text-slate-500 font-medium">Lat doświadczenia</p>
-                  <p className="font-bold text-slate-900 text-sm">w nauczaniu</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Prawa strona - Dowody zaufania & Tekst */}
-          <div className="w-full lg:w-3/5 order-1 lg:order-2">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-pink/15 text-brand-pink font-semibold text-sm mb-6">
-              <Award className="w-4 h-4" />
-              <span>O mnie</span>
+          {/* Lewa strona - 7 z 12 - Teksty i Dowody */}
+          <div className="lg:col-span-7 flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-warm-orange/10 text-warm-orange font-bold text-xs mb-6 w-fit uppercase tracking-wider">
+              <Award className="w-3.5 h-3.5" />
+              <span>O autorce</span>
             </div>
             
-            <h2 className="font-heading font-bold text-3xl md:text-5xl text-slate-900 mb-8 leading-tight">
-              Zaufanie to dowody.
+            <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-slate-900 mb-8 leading-tight">
+              Cześć, jestem Agata!
             </h2>
 
-            {/* Lista dowodów */}
+            {/* Siatka osiągnięć - białe karty na kremowym tle */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {credentials.map((cred, idx) => (
-                <div key={idx} className="flex items-center gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                  <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center shadow-sm shrink-0 border border-slate-100/50">
+                <div 
+                  key={idx} 
+                  className="flex items-center gap-3 bg-white p-4 rounded-xl border border-orange-100 hover:border-warm-orange/20 transition-all shadow-sm"
+                >
+                  <div className="w-8 h-8 rounded-lg bg-warm-orange/10 flex items-center justify-center text-warm-orange shrink-0">
                     {cred.icon}
                   </div>
-                  <span className="text-slate-800 font-bold text-sm leading-snug">{cred.text}</span>
+                  <span className="text-slate-800 font-bold text-xs md:text-sm leading-snug">{cred.text}</span>
                 </div>
               ))}
             </div>
-            
-            <div className="space-y-6 text-base md:text-lg text-slate-700 leading-relaxed font-medium">
-              <p>
-                Ale najważniejsze jest to, czego nauczyła mnie własna droga z hiszpańskim.
-              </p>
-              <p>
-                Wiem, jak to jest uczyć się latami, a potem odkryć, że w prawdziwej rozmowie nie potrafisz wykorzystać tego, co przecież znasz.
-              </p>
-              <p>
-                Dlatego dziś nie chcę dawać Ci kolejnej porcji materiałów. Chcę najpierw znaleźć miejsce, w którym utknęłaś — i powiedzieć Ci, co możesz zrobić inaczej.
-              </p>
 
-              {/* Cytat od uczniów */}
-              <div className="py-4 pl-6 border-l-4 border-brand-pink bg-purple-50/30 rounded-r-2xl italic font-bold text-slate-900 shadow-sm mt-6">
-                „Bez Ciebie nigdy nie zaczęłabym mówić.”
-                <span className="block text-xs font-semibold text-slate-500 mt-1 not-italic">— wiadomość od jednej z moich kursantek</span>
+            <div className="space-y-4 text-slate-600 font-semibold text-sm md:text-base leading-relaxed">
+              <p>
+                Dziś mieszkam w Hiszpanii i czuję się tu jak w domu. Pomagam Polakom, którzy już tu są lub planują przeprowadzkę, poczuć dokładnie to samo i swobodnie rozmawiać na co dzień bez stresu.
+              </p>
+              
+              <p className="font-bold text-slate-900 text-base pt-2">
+                Ale moja własna droga to nie była miłość od pierwszego wejrzenia:
+              </p>
+              
+              <ul className="space-y-3 pl-1 mb-6">
+                <li className="flex gap-2.5 items-start">
+                  <span className="shrink-0 mt-0.5">💔</span>
+                  <p className="text-xs md:text-sm"><strong className="text-slate-900">Nienawiść po licencjacie:</strong> Nudne podręczniki i wkuwanie gramatycznych tabelek prawie zabiły moją pasję do języka.</p>
+                </li>
+                <li className="flex gap-2.5 items-start">
+                  <span className="shrink-0 mt-0.5">🗣️</span>
+                  <p className="text-xs md:text-sm"><strong className="text-slate-900">8 lat do pierwszej rozmowy:</strong> W szkole i na studiach nie uczą żywego języka. Sama zaczęłam swobodnie mówić dopiero po 8 latach!</p>
+                </li>
+                <li className="flex gap-2.5 items-start">
+                  <span className="shrink-0 mt-0.5">🙈</span>
+                  <p className="text-xs md:text-sm"><strong className="text-slate-900">Erasmusowy wstyd:</strong> Chciałam powiedzieć kilka miłych słów na zajęciach, ale ze stresu nie wykrztusiłam ani jednego słowa przed całą salą. Musiałam dokończyć po angielsku.</p>
+                </li>
+              </ul>
+            </div>
+
+            {/* Karuzela ze screenami opinii w miejscu cytatu */}
+            <div className="mt-4 bg-white border border-orange-100 rounded-2xl p-4 shadow-md flex flex-col items-center max-w-md">
+              <div className="flex items-center gap-2 mb-3 self-start">
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400">
+                  Wiadomości od moich kursantek (1 z 400+)
+                </span>
+              </div>
+
+              {/* Zdjęcie opinii */}
+              <div className="relative w-full aspect-[16/10] bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex items-center justify-center">
+                <Image 
+                  src={images[activeIndex]} 
+                  alt={`Wiadomość od kursantki ${activeIndex + 1}`} 
+                  fill 
+                  className="object-contain p-1"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                />
+              </div>
+
+              {/* Nawigacja w karuzeli */}
+              <div className="flex items-center justify-between w-full mt-3 px-1 text-slate-500">
+                <button 
+                  onClick={handlePrev}
+                  className="p-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer"
+                  aria-label="Poprzednia opinia"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <span className="text-[10px] font-mono font-bold text-slate-400">
+                  {activeIndex + 1} / {images.length}
+                </span>
+                <button 
+                  onClick={handleNext}
+                  className="p-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer"
+                  aria-label="Następna opinia"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
               </div>
             </div>
+
           </div>
-          
+
+          {/* Prawa strona - 5 z 12 - Zdjęcie z grafikami w tle */}
+          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
+            <div className="absolute top-4 left-4 w-72 h-72 bg-pink-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+            
+            <div className="relative w-full max-w-[360px] aspect-[3/4] rounded-2xl overflow-hidden border-[6px] border-white shadow-2xl bg-slate-100">
+              <Image 
+                src="/images/about-photo.jpg" 
+                alt="Agata Piątek – Mentorka języka hiszpańskiego" 
+                fill
+                className="object-cover object-top" 
+                sizes="(max-width: 768px) 100vw, 40vw"
+              />
+            </div>
+          </div>
+
         </div>
 
-        <hr className="border-slate-100 my-16" />
+        <hr className="border-orange-200 my-16" />
 
-        {/* Dolna część - Filozofia / Sekcja O Tobie */}
+        {/* Dolna część - Filozofia uczenia */}
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="font-heading font-bold text-2xl md:text-4xl text-slate-900 mb-8 leading-tight max-w-2xl mx-auto">
+          <h3 className="font-heading font-extrabold text-2xl md:text-4xl text-slate-900 mb-6 leading-tight">
             Uczę naturalnego hiszpańskiego, żeby życie w Hiszpanii było po prostu prostsze. ☀️
           </h3>
 
-          <div className="space-y-6 text-base md:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto font-medium">
+          <div className="space-y-6 text-slate-600 font-semibold text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
             <p>
-              Nie wierzę w naukę języka polegającą na bezmyślnym przerabianiu kolejnych stron podręcznika.
+              Samo mieszkanie w Hiszpanii nie uczy automatycznie języka (łatwo zamknąć się w polskiej bańce), a wkuwanie list słówek to strata czasu.
             </p>
-            <p className="text-slate-900 font-bold">
-              Wierzę w hiszpański, którego naprawdę używasz — podczas rozmowy z sąsiadem, w sklepie, w urzędzie, przy kawie.
-            </p>
-            <p>
-              I wierzę, że każdy potrzebuje trochę innej drogi. Dlatego w **GLOW UP** nie dostajesz gotowego programu dla „każdego na poziomie B1”. 
-            </p>
-            <p className="text-primary-hover font-bold">
-              Najpierw poznaję Ciebie i Twój hiszpański. Potem mówię Ci, co warto zrobić dalej.
+            <p className="text-slate-950 font-extrabold text-lg">
+              Wierzę w hiszpański, którego naprawdę używasz — podczas rozmowy z sąsiadem, w urzędzie, przy kawie czy w sklepie.
             </p>
             <p>
-              To właśnie takie podejście stosuję w pracy z moimi uczniami od ponad 9 lat.
+              W programie GLOW UP bez owijania w bawełnę diagnozuję Twoje blokady i pokazuję Ci, jak zacząć uczyć się sprytniej, by w końcu zacząć swobodnie rozmawiać.
             </p>
           </div>
 
           <div className="mt-8 flex items-center justify-center gap-2">
-            <span className="font-heading italic text-3xl font-bold text-primary">Agata</span>
-            <Heart className="w-6 h-6 text-brand-pink fill-brand-pink/20" />
+            <span className="font-heading italic text-2xl font-extrabold text-warm-orange">Agata</span>
+            <Heart className="w-5 h-5 text-warm-orange fill-warm-orange" />
           </div>
         </div>
 

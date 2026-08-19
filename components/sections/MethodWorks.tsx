@@ -1,112 +1,72 @@
-import { Sparkles, Calendar, Search, FileText, Play, MessageSquare, AlertCircle } from "lucide-react";
+import { Calendar, Search, FileText, Play, Sparkles } from "lucide-react";
 
 export default function MethodWorks() {
   const steps = [
     {
-      num: "Krok 1",
-      icon: <Calendar className="w-6 h-6 text-primary" />,
+      num: "01",
+      icon: <Calendar className="w-5 h-5 text-warm-orange" />,
       title: "Kupujesz GLOW UP",
-      desc: "Po zakupie otrzymasz maila z formularzem, w którym wybierzesz dogodny dla Ciebie termin konsultacji. Spotykamy się online na Google Meet."
+      desc: "Po zakupie otrzymasz maila z formularzem. Wybierasz dogodny dla Ciebie termin konsultacji na Google Meet."
     },
     {
-      num: "Krok 2",
-      icon: <Search className="w-6 h-6 text-primary" />,
-      title: "Robimy RTG Twojego hiszpańskiego",
-      desc: "Porozmawiamy o Twojej historii nauki, celach i trudnościach. Podczas rozmowy po hiszpańsku sprawdzę, jak w praktyce posługujesz się językiem. Nie będziemy zgadywać – zdiagnozuję Twoje realne blokady."
+      num: "02",
+      icon: <Search className="w-5 h-5 text-warm-orange" />,
+      title: "Robimy RTG języka",
+      desc: "Opowiadasz mi o swojej historii nauki i celach a później na luzie przechodzimy do rozmowy po hiszpańsku. Sprawdzę, jak faktycznie używasz struktur językowych żeby pod koniec móc dać ci jak najlepszy feedback."
     },
     {
-      num: "Krok 3",
-      icon: <FileText className="w-6 h-6 text-primary" />,
-      title: "Tego samego dnia dostajesz pierwsze zalecenia",
-      desc: "Wstępne wskazówki otrzymasz od razu. Pełny, indywidualny plan działania w formacie PDF oraz dobrane do Ciebie materiały na pierwszy miesiąc prześlę Ci w ciągu maksymalnie 7 dni od konsultacji."
+      num: "03",
+      icon: <FileText className="w-5 h-5 text-warm-orange" />,
+      title: "Otrzymujesz zalecenia",
+      desc: "Pierwsze wnioski znasz od razu. Pełny plan działania w PDF oraz spersonalizowane materiały na 1. miesiąc wysyłam do 7 dni."
     },
     {
-      num: "Krok 4",
-      icon: <Play className="w-6 h-6 text-primary" />,
+      num: "04",
+      icon: <Play className="w-5 h-5 text-warm-orange" />,
       title: "Zaczynasz działać",
-      desc: "Zamiast ogólnej listy zadań dostajesz precyzyjny kierunek dopasowany do Twojej sytuacji życiowej i celów. Dokładnie wiesz, co robić, jak ćwiczyć i możesz natychmiast ruszyć z miejsca."
+      desc: "Wiesz dokładnie co ćwiczyć i jak pracować każdego dnia. Dostajesz spersonalizowane materiały i ruszasz."
     }
   ];
 
   return (
-    <section id="jak-to-dziala" className="bg-white py-20 md:py-32 relative overflow-hidden">
-      {/* Tła dekoracyjne */}
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-orange-400/5 rounded-full blur-[100px] pointer-events-none"></div>
+    <section id="jak-to-dziala" className="bg-warm-orange text-white py-24 md:py-32 relative overflow-hidden">
+      {/* Słoneczne rozbłyski tła */}
+      <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-white/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl px-6 mx-auto relative z-10">
         
-        {/* Nagłówek główny */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-primary font-bold text-sm mb-6">
-            <Play className="w-4 h-4" />
-            <span>Przebieg procesu</span>
-          </div>
-          <h2 className="font-heading font-bold text-3xl md:text-5xl text-slate-900 mb-6 leading-tight max-w-3xl mx-auto">
-            60 minut. <br className="md:hidden" />
-            <span className="text-primary italic">Tylko Ty, ja i Twój hiszpański.</span>
+        {/* Nagłówek */}
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <span className="text-xs font-mono font-bold tracking-widest text-white/80 uppercase block mb-3">// KROKI WSPÓŁPRACY</span>
+          <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-white mb-6 leading-tight">
+            Jak wygląda nasza współpraca?
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto font-medium">
-            Zobacz, jak krok po kroku przejdziemy przez prześwietlenie Twoich kompetencji językowych:
+          <p className="text-orange-100 font-semibold text-base md:text-lg">
+            Prosty i efektywny proces, który w 4 krokach poukłada Twoją naukę:
           </p>
         </div>
 
-        {/* Kroki procesu */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 relative mb-20">
-          {/* Łącząca linia pozioma dla desktopów */}
-          <div className="hidden lg:block absolute top-[68px] left-[10%] right-[10%] h-0.5 bg-slate-100 -z-10"></div>
-          
+        {/* Siatka 4 kroków - białe, kontrastowe karty na pomarańczowym tle */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto mb-16">
           {steps.map((step, idx) => (
-            <div key={idx} className="relative flex flex-col items-center text-center group">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">{step.num}</span>
-              <div className="w-16 h-16 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center mb-6 group-hover:bg-primary/10 group-hover:border-primary/30 transition-all duration-300">
-                {step.icon}
+            <div 
+              key={idx} 
+              className="bg-white p-6 rounded-2xl border border-white/20 shadow-lg flex flex-col justify-between relative group hover:-translate-y-1 transition-transform"
+            >
+              <div>
+                <div className="flex justify-between items-center mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-warm-orange-light flex items-center justify-center border border-orange-100 shadow-sm">
+                    {step.icon}
+                  </div>
+                  <span className="font-mono text-lg font-extrabold text-warm-orange/50 group-hover:text-warm-orange transition-colors">
+                    {step.num}
+                  </span>
+                </div>
+                <h3 className="font-heading font-bold text-lg text-slate-900 mb-3 leading-snug">{step.title}</h3>
+                <p className="text-slate-500 text-xs leading-relaxed font-semibold">{step.desc}</p>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-3 leading-snug">{step.title}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed font-medium">{step.desc}</p>
             </div>
           ))}
-        </div>
-
-        {/* Sekcja GLOW UP PREMIUM */}
-        <div className="bg-orange-50 border border-orange-200 rounded-[2.5rem] p-8 md:p-12 shadow-md relative overflow-hidden mb-16">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl -z-10"></div>
-          
-          <div className="flex flex-col lg:flex-row gap-8 items-start lg:items-center">
-            <div className="w-full lg:w-2/3">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-pink/20 text-brand-pink font-bold text-xs mb-4">
-                <Sparkles className="w-3.5 h-3.5" />
-                Dla wymagających
-              </span>
-              <h3 className="font-heading font-bold text-2xl md:text-3xl text-slate-900 mb-4">
-                A jeśli wybierzesz GLOW UP PREMIUM?
-              </h3>
-              <p className="text-slate-700 font-medium text-base leading-relaxed mb-4">
-                Otrzymujesz natychmiastowy dostęp do **Strefy Hiszpański** oraz **Klubu Hiszpański Todos Los Días**. 
-                Przez kolejne **3 miesiące** wdrażania zaleceń nie zostajesz sama – możesz konsultować ze mną każdą wątpliwość bezpośrednio w aplikacji.
-              </p>
-              <div className="flex flex-wrap gap-4 text-xs font-bold text-slate-800">
-                <span className="bg-white/80 border border-orange-200/60 px-3.5 py-1.5 rounded-full">🚫 Bez limitu pytań</span>
-                <span className="bg-white/80 border border-orange-200/60 px-3.5 py-1.5 rounded-full">⏱️ Odpowiedź w 24 godziny</span>
-                <span className="bg-white/80 border border-orange-200/60 px-3.5 py-1.5 rounded-full">📱 Kontakt przez aplikację</span>
-              </div>
-            </div>
-            
-            <div className="w-full lg:w-1/3 shrink-0 flex flex-col gap-3 p-6 bg-white rounded-2xl border border-orange-100 shadow-sm">
-              <h4 className="font-bold text-slate-900 text-sm uppercase tracking-wider mb-2 text-center border-b border-slate-50 pb-2">
-                Szybkie podsumowanie:
-              </h4>
-              <div className="space-y-2.5 text-xs text-slate-700 font-medium">
-                <p className="flex items-start gap-2">
-                  <span className="text-primary font-bold">GLOW UP</span> 
-                  <span>→ diagnoza + plan i kierunek + dopasowane materiały</span>
-                </p>
-                <p className="flex items-start gap-2 border-t border-slate-50 pt-2.5">
-                  <span className="text-brand-pink font-bold">PREMIUM</span> 
-                  <span>→ diagnoza + plan i materiały + 3 miesiące wsparcia wdrażania</span>
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>

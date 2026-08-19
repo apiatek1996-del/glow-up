@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -9,91 +9,96 @@ export default function FAQ() {
 
   const faqs = [
     {
-      q: 'Czy to jest lekcja hiszpańskiego?',
-      a: 'Nie. To diagnoza Twojej aktualnej sytuacji + indywidualne zalecenia dotyczące dalszej nauki.'
+      q: 'Czy to jest zwykła lekcja hiszpańskiego?',
+      a: 'Nie. To diagnostyka Twojej aktualnej sytuacji językowej + przygotowanie indywidualnych zaleceń i planu działania do samodzielnej lub kierowanej pracy.'
     },
     {
-      q: 'Czy muszę przygotować się do konsultacji?',
-      a: 'Nie musisz robić żadnych specjalnych ćwiczeń. Przed spotkaniem dostaniesz formularz, dzięki któremu poznam Twoją historię z hiszpańskim, cele i trudności.'
+      q: 'Czy muszę jakoś specjalnie przygotować się do konsultacji?',
+      a: 'Nie musisz nic powtarzać ani robić testów wcześniej. Przed naszym spotkaniem otrzymasz formularz, który pomoże mi poznać Twoją historię nauki, cele oraz trudności.'
     },
     {
-      q: 'Czy GLOW UP jest dla mnie, jeśli nie mieszkam w Hiszpanii?',
-      a: 'Tak. Kluczowe jest to, na jakim jesteś etapie, czego potrzebujesz i co chcesz osiągnąć.'
+      q: 'Czy program GLOW UP jest dla mnie, jeśli nie mieszkam w Hiszpanii?',
+      a: 'Tak. Choć wiele moich uczennic mieszka na stałe w Hiszpanii, program jest w 100% efektywny dla każdego, kto ma problem z barierą językową niezależnie od lokalizacji.'
     },
     {
-      q: 'A jeśli mam już mnóstwo materiałów do nauki?',
-      a: 'Tym lepiej. Nie zawsze potrzebujesz kolejnych. Podczas GLOW UP możesz dowiedzieć się, jak lepiej wykorzystać te, które już masz.'
+      q: 'Co jeśli mam już na półce mnóstwo materiałów do nauki?',
+      a: 'To świetnie. Nie będziemy kupować nowych książek. Podczas konsultacji nauczę Cię, jak prawidłowo i efektywnie korzystać z materiałów, które już zgromadziłaś.'
     },
     {
-      q: 'Co jeśli nie wiem, co właściwie mnie blokuje?',
-      a: 'To właśnie jeden z powodów, dla których powstał GLOW UP. Nie musisz znać odpowiedzi przed konsultacją.'
+      q: 'Co jeśli nie potrafię dokładnie określić, co mnie blokuje?',
+      a: 'Właśnie po to jest to spotkanie. Za pomocą dedykowanych pytań i swobodnej rozmowy sama namierzę blokadę i pokażę Ci ją w podsumowaniu.'
     },
     {
-      q: 'Kiedy dostanę swoje materiały i zalecenia?',
-      a: 'Wstępne zalecenia otrzymasz jeszcze tego samego dnia. Pełne podsumowanie, indywidualne zalecenia i materiały na pierwszy miesiąc dostaniesz maksymalnie w ciągu 7 dni od konsultacji.'
+      q: 'Kiedy otrzymam zalecenia i plan w PDF?',
+      a: 'Wstępne kierunki działania nakreślę Ci pod koniec rozmowy. Pełną pisemną diagnozę, spersonalizowany plan i materiały otrzymasz na maila w ciągu 7 dni od konsultacji.'
     },
     {
-      q: 'Co jeśli żaden z dostępnych terminów mi nie pasuje?',
-      a: 'Spokojnie ustalimy termin, który będzie pasował nam obu. Jeśli mimo prób w ciągu 2 tygodni nie uda nam się znaleźć wspólnego terminu i zdecydujesz się zrezygnować z konsultacji, zwrócę Ci pieniądze.'
+      q: 'Co w przypadku, gdy żaden termin w kalendarzu mi nie pasuje?',
+      a: 'Napisz do mnie bezpośrednio – wspólnie znajdziemy dogodny termin. Jeżeli w ciągu 2 tygodni nie uda nam się dogadać terminu i zrezygnujesz, zwracam 100% kwoty.'
     },
     {
-      q: 'Czy po GLOW UP zostanę sama z zaleceniami?',
-      a: 'W wersji GLOW UP otrzymujesz wszystko, czego potrzebujesz, żeby zacząć działać samodzielnie. Jeśli chcesz dodatkowego wsparcia, wybierz GLOW UP PREMIUM, w którym przez 3 miesiące możesz konsultować swoje wątpliwości.'
+      q: 'Czy po konsultacji zostaję sama z materiałami?',
+      a: 'W pakiecie standardowym otrzymujesz kompletny plan do samodzielnej realizacji. Jeśli zależy Ci na wsparciu i możliwości zadawania pytań na bieżąco, wybierz wersję Premium.'
     },
     {
-      q: 'Co dokładnie dostaję w Premium?',
-      a: 'Wszystko z GLOW UP + 3 miesiące wsparcia, kontakt przez aplikację, dostęp do Strefy Hiszpański i Klubu Hiszpański Todos Los Días, brak limitu pytań i odpowiedzi do 24 godzin.'
+      q: 'Co dokładnie wchodzi w zakres wsparcia w pakiecie Premium?',
+      a: 'Dostajesz wszystko z pakietu podstawowego oraz 3 miesiące asysty przez dedykowaną aplikację. Odpowiadam na Twoje pytania i koryguję błędy w ciągu 24 godzin.'
     },
     {
-      q: 'A co jeśli nie będę miała czasu wdrożyć zaleceń?',
-      a: 'Właśnie dlatego podczas konsultacji nie będziemy układać planu idealnego na papierze, ale niemożliwego do zrealizowania w Twoim życiu. Ustalimy, co możesz realnie robić i jak wpleść hiszpański w swoją codzienność, żeby nauka była możliwa do utrzymania. Bo lepsze 15 minut regularnej, dobrze dobranej pracy niż 2 godziny ambitnego planu, którego nie uda Ci się zrealizować.'
+      q: 'A co jeśli nie znajdę czasu na wdrożenie planu?',
+      a: 'Podczas konsultacji nie tworzymy idealnego planu z bajki, ale plan skrojony pod Twoje realne życie. Ustalimy jak wpleść regularne 15 minut hiszpańskiego w Twój plan dnia.'
     }
   ];
 
   return (
-    <section id="faq" className="bg-slate-50 py-20 md:py-32 relative overflow-hidden">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="faq" className="bg-warmSun py-20 md:py-32 relative overflow-hidden">
+      <div className="max-w-3xl mx-auto px-6 relative z-10">
         
-        <div className="text-center mb-12">
-            <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full bg-white border-4 md:border-[6px] border-white shadow-2xl flex items-center justify-center overflow-hidden relative mx-auto mb-8">
-               {/* Avatar - wycięta twarz z uśmiechem */}
-               <Image 
-                 src="/images/avatar.jpg" 
-                 alt="Ada - Portret autorki testu" 
-                 width={192}
-                 height={192}
-                 className="w-full h-full object-cover object-top" 
-               />
-            </div>
-          <h2 className="font-heading font-bold text-3xl md:text-5xl text-slate-900 mb-6 leading-tight">
-            Zanim zrobisz GLOW UP — kilka ważnych odpowiedzi.
+        {/* Nagłówek */}
+        <div className="text-center mb-16">
+          <div className="w-24 h-24 rounded-full border-4 border-white shadow-xl overflow-hidden relative mx-auto mb-6">
+             <Image 
+               src="/images/avatar.jpg" 
+               alt="Ada – Autorka programu Glow Up" 
+               width={96}
+               height={96}
+               className="w-full h-full object-cover object-top" 
+             />
+          </div>
+          <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-slate-900 mb-4 leading-tight">
+            Częste pytania (FAQ)
           </h2>
-          <p className="text-xl text-slate-600 mb-10 italic">
-            Najczęściej zadawane pytania
+          <p className="text-slate-500 font-semibold text-base md:text-lg">
+            Wszystko, co warto wiedzieć przed startem programu:
           </p>
         </div>
 
-        <div className="space-y-4">
-          {faqs.map((faq, idx) => (
-            <div 
-              key={idx} 
-              className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 ${openIndex === idx ? 'border-primary shadow-md' : 'border-slate-200'}`}
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
-              >
-                <span className="font-bold text-lg text-slate-900 pr-4">{faq.q}</span>
-                <ChevronDown className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300 ${openIndex === idx ? 'rotate-180 text-primary' : ''}`} />
-              </button>
-              
+        {/* Akordeon - białe elementy na kremowym tle z pomarańczowymi ramkami */}
+        <div className="space-y-4 max-w-2xl mx-auto">
+          {faqs.map((faq, idx) => {
+            const isOpen = openIndex === idx;
+            
+            return (
               <div 
-                className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openIndex === idx ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'}`}
+                key={idx} 
+                className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? 'border-primary shadow-sm' : 'border-orange-100'}`}
               >
-                <p className="text-slate-600 leading-relaxed">{faq.a}</p>
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : idx)}
+                  className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none cursor-pointer"
+                >
+                  <span className="font-bold text-slate-800 text-sm md:text-base pr-4">{faq.q}</span>
+                  <ChevronDown className={`w-5 h-5 text-slate-455 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-primary' : ''}`} />
+                </button>
+                
+                <div 
+                  className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'}`}
+                >
+                  <p className="text-slate-500 text-xs md:text-sm leading-relaxed font-semibold">{faq.a}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>

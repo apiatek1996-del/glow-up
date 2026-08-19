@@ -9,28 +9,37 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#E89D4F", // Golden-Orange from insta tile
+          DEFAULT: "#D584C8", // Pink accent
+          hover: "#C26FB5",
+          light: "#FDF4FC",
+        },
+        indigoBrand: {
+          DEFAULT: "#7C3AED",
+          hover: "#6D28D9",
+        },
+        warmSun: {
+          DEFAULT: "#FFFDF0",
+          dark: "#FEF9C3",
+        },
+        warmOrange: {
+          DEFAULT: "#E89D4F", // Warm orange
+          light: "#FFF7ED",
           hover: "#D48639",
-          light: "#F7B46E",
         },
         background: {
-          DEFAULT: "#FFF8EA", // Warm light cream
-          dark: "#F0E7D8",
+          DEFAULT: "#FFFDF5", // Warm cream instead of grey!
+          dark: "#FFF7ED",
           light: "#FFFFFF",
         },
-        brand: {
-          pink: "#D584C8", // Soft magenta-pink
-          green: "#06B050", // Vibrant green shirt
-        },
         slate: {
-          900: "#27272A", // Slightly warmer dark
-          800: "#3F3F46",
-          700: "#52525B",
+          900: "#1E293B", // Text
+          800: "#334155",
+          700: "#475569",
         }
       },
       fontFamily: {
-        sans: ["var(--font-poppins)", "sans-serif"],
-        heading: ["var(--font-lora)", "serif"],
+        sans: ["var(--font-montserrat)", "sans-serif"],
+        heading: ["var(--font-playfair)", "serif"],
       },
     },
   },

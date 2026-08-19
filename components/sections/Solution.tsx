@@ -1,88 +1,82 @@
-import { CheckCircle2, XCircle, Sparkles } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 export default function Solution() {
-  const isForYou = [
-    "uczysz się hiszpańskiego już jakiś czas, ale masz wrażenie, że utknęłaś",
-    "uczysz się systematycznie, a mimo to nie czujesz, że naprawdę robisz postęp",
-    "masz poczucie, że wiesz więcej, niż potrafisz wykorzystać w rozmowie",
-    "masz mnóstwo materiałów, ale nie wiesz, z czego właściwie powinnaś korzystać",
-    "robisz ćwiczenia, oglądasz seriale, słuchasz podcastów… ale masz wrażenie, że dużo robisz, a mało z tego zostaje",
-    "znasz gramatykę w teorii, ale podczas rozmowy nagle wszystko gdzieś znika",
-    "mieszkasz w Hiszpanii, masz kontakt z językiem, a mimo to nadal nie czujesz się swobodnie",
-    "nie wiesz, co konkretnie powinnaś teraz ćwiczyć",
-    "masz dość dokładania sobie kolejnych materiałów i chcesz wreszcie uporządkować swoją naukę",
-    "potrzebujesz kogoś, kto spojrzy na Twój hiszpański z boku i powie: „Tu jest problem. Tym zajmiemy się teraz.”"
-  ];
-
-  const isNotForYou = [
-    "dopiero zaczynasz naukę hiszpańskiego",
-    "szukasz kolejnego kursu, w którym ktoś krok po kroku powie Ci, czego masz się nauczyć",
-    "oczekujesz, że sama konsultacja zrobi za Ciebie całą pracę",
-    "nie chcesz nic zmieniać w swoim sposobie nauki"
+  const benefits = [
+    {
+      title: "Będziesz wiedzieć, co tak naprawdę Cię blokuje",
+      desc: "Zamiast zgadywać, precyzyjnie zlokalizujemy co sprawia że wątpisz w swoje umiejętności i będziemy nad tym pracować."
+    },
+    {
+      title: "Ustalisz, nad czym warto pracować TERAZ",
+      desc: "Skupisz się wyłącznie na tym, co przyniesie najszybsze rezultaty w Twoim swobodnym mówieniu."
+    },
+    {
+      title: "Zaczniesz lepiej wykorzystywać materiały, które już masz",
+      desc: "Koniec z kupowaniem kolejnych książek. Dowiesz się jak uczyć się efektywnie za pomocą posiadanych zasobów."
+    },
+    {
+      title: "Stworzysz sposób nauki dopasowany do Twojego celu i życia",
+      desc: "Plan ułożymy tak, aby pasował do Twojego codziennego harmonogramu."
+    }
   ];
 
   return (
-    <section className="bg-slate-50 py-20 md:py-32 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="rozwiazanie" className="bg-primary-light py-20 md:py-32 relative overflow-hidden">
+      {/* Elementy dekoracyjne */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-warm-orange/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div className="max-w-6xl px-6 mx-auto relative z-10">
         
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-semibold text-sm mb-6">
-            <Sparkles className="w-4 h-4" />
-            <span>Dla kogo to jest?</span>
-          </div>
-          <h2 className="font-heading font-bold text-3xl md:text-5xl text-slate-900 mb-6 leading-tight">
-            Czy to propozycja dla Ciebie?
+        {/* Nagłówek i Wprowadzenie */}
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <span className="text-xs font-bold uppercase tracking-widest text-primary block mb-3">// TWOJE ROZWIĄZANIE</span>
+          <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-slate-900 mb-6 leading-tight">
+            Może wcale nie potrzebujesz kolejnych 50 ćwiczeń.
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto font-medium">
-            Sprawdź, czy Twoja sytuacja pasuje do założeń programu **GLOW UP**:
+          <p className="text-slate-500 font-semibold text-base md:text-lg">
+            Glow Up to program diagnostyczno-mentoringowy, dzięki któremu uporządkujesz swoją naukę i zaczniesz mówić.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
+        {/* Layout: Split screen */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-5xl mx-auto">
           
-          {/* Kolumna: DLA KOGO JEST */}
-          <div className="bg-white p-8 sm:p-10 rounded-[2.5rem] border border-slate-200 shadow-xl relative h-full">
-            <h3 className="font-heading font-bold text-2xl text-slate-900 mb-6 flex items-center gap-2 pb-4 border-b border-slate-100">
-              <CheckCircle2 className="w-6 h-6 text-green-600 shrink-0" />
-              GLOW UP jest dla Ciebie, jeśli…
+          {/* Lewa strona - 5 z 12 - Krótki opis i CTA */}
+          <div className="lg:col-span-5 flex flex-col justify-center">
+            <h3 className="font-heading font-extrabold text-2xl text-slate-900 mb-6 leading-tight">
+              Po programie GLOW UP poczujesz kontrolę nad językiem.
             </h3>
-            <ul className="space-y-4">
-              {isForYou.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
-                  <span className="text-slate-700 font-medium text-sm md:text-base leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="text-slate-600 font-semibold text-sm leading-relaxed mb-8">
+              Pokażę Ci jakie elementy musisz powtórzyć, przećwiczyć albo co jeszcze potrzebujesz opanować na swoim etapie, żeby poczuć się pewnie mówiąc. I przygotuję dla Ciebie mapę ze wskazówkami na najbliższe miesiące - ale pamiętaj, to ty będziesz musiała je wdrożyć 😎
+            </p>
+            <div>
+              <a 
+                href="#cennik" 
+                className="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold py-3.5 px-6 rounded-xl transition-all shadow-md cursor-pointer"
+              >
+                Zobacz pakiety i ceny
+              </a>
+            </div>
           </div>
 
-          {/* Kolumna: DLA KOGO NIE JEST */}
-          <div className="bg-white p-8 sm:p-10 rounded-[2.5rem] border border-slate-200 shadow-lg relative h-full">
-            <h3 className="font-heading font-bold text-2xl text-slate-900 mb-6 flex items-center gap-2 pb-4 border-b border-slate-100">
-              <XCircle className="w-6 h-6 text-slate-400 shrink-0" />
-              GLOW UP nie jest dla Ciebie, jeśli…
-            </h3>
-            <ul className="space-y-4">
-              {isNotForYou.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <XCircle className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
-                  <span className="text-slate-500 font-medium text-sm md:text-base leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
+          {/* Prawa strona - 7 z 12 - Białe karty korzyści z pomarańczowymi checkmarkami */}
+          <div className="lg:col-span-7 grid gap-4">
+            {benefits.map((benefit, idx) => (
+              <div 
+                key={idx} 
+                className="flex gap-4 p-5 rounded-2xl bg-white border border-orange-100 hover:border-primary/30 transition-colors shadow-sm"
+              >
+                <div className="w-9 h-9 rounded-lg bg-warm-orange/15 flex items-center justify-center text-warm-orange shrink-0">
+                  <CheckCircle2 className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="font-heading font-bold text-slate-900 text-sm md:text-base mb-1">{benefit.title}</h4>
+                  <p className="text-slate-500 text-xs leading-relaxed font-semibold">{benefit.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
-        </div>
-
-        {/* Puenta na dole */}
-        <div className="max-w-3xl mx-auto mt-16 bg-orange-50 rounded-2xl border border-orange-100 p-8 shadow-sm text-center">
-          <p className="font-heading font-bold text-xl md:text-2xl text-slate-900 mb-3">
-            GLOW UP nie jest magiczną pigułką.
-          </p>
-          <p className="text-slate-700 font-medium text-base md:text-lg leading-relaxed">
-            Dostajesz diagnozę, kierunek i konkretne zalecenia. <br className="hidden md:inline" />
-            A potem trzeba je wdrożyć.
-          </p>
         </div>
 
       </div>
