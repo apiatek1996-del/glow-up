@@ -145,12 +145,12 @@ export default function About() {
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
             <div className="absolute top-4 left-4 w-72 h-72 bg-pink-100 rounded-full blur-3xl opacity-50 -z-10"></div>
             
-            <div className="relative w-full max-w-[360px] aspect-[3/4] rounded-2xl overflow-hidden border-[6px] border-white shadow-2xl bg-slate-100">
+            <div className="relative w-full max-w-[400px] aspect-[4/3] rounded-2xl overflow-hidden border-[6px] border-white shadow-2xl bg-slate-100">
               <Image 
-                src="/images/about-photo.jpg" 
-                alt="Agata Piątek – Mentorka języka hiszpańskiego" 
+                src="/images/hola-tu-agata.png" 
+                alt="Agata Piątek – Hola! Tu Agata" 
                 fill
-                className="object-cover object-top" 
+                className="object-cover object-center" 
                 sizes="(max-width: 768px) 100vw, 40vw"
               />
             </div>
