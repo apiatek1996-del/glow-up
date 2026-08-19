@@ -43,7 +43,7 @@ export default function About() {
       <div className="max-w-6xl px-6 mx-auto relative z-10">
         
         {/* Górna część - O mnie & Dowody (Zdjęcie po lewej 6/12, Tekst po prawej 6/12) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Lewa strona - Zdjęcie (6 z 12) */}
           <div className="lg:col-span-6 relative flex justify-center lg:justify-start">
@@ -61,7 +61,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Prawa strona - Teksty, Dowody i Karuzela (6 z 12) */}
+          {/* Prawa strona - Teksty i Dowody (6 z 12) */}
           <div className="lg:col-span-6 flex flex-col justify-center text-left">
             
             <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-slate-900 mb-8 leading-tight">
@@ -83,7 +83,7 @@ export default function About() {
               ))}
             </div>
 
-            <div className="space-y-4 text-slate-600 font-semibold text-sm leading-relaxed mb-6">
+            <div className="space-y-4 text-slate-600 font-semibold text-sm leading-relaxed">
               <p>
                 Dziś mieszkam w Hiszpanii i czuję się tu jak w domu. Pomagam Polakom, którzy już tu są lub planują przeprowadzkę, poczuć dokładnie to samo i swobodnie rozmawiać na co dzień bez stresu.
               </p>
@@ -108,51 +108,53 @@ export default function About() {
               </ul>
             </div>
 
-            {/* Karuzela ze screenami opinii w miejscu cytatu */}
-            <div className="mt-2 bg-white border border-orange-100 rounded-2xl p-4 shadow-md flex flex-col items-center w-full max-w-md">
-              <div className="flex items-center gap-2 mb-3 self-start">
-                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 block">
-                  {"// a teraz dostaję takie wiadomości"}
-                  <span className="block mt-0.5">{"od moich kursantów i kursantek <3"}</span>
-                </span>
-              </div>
-
-              {/* Zdjęcie opinii */}
-              <div className="relative w-full aspect-[16/10] bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex items-center justify-center">
-                <Image 
-                  src={images[activeIndex]} 
-                  alt={`Wiadomość od kursantki ${activeIndex + 1}`} 
-                  fill 
-                  className="object-contain p-1"
-                  sizes="(max-width: 768px) 100vw, 400px"
-                />
-              </div>
-
-              {/* Nawigacja w karuzeli */}
-              <div className="flex items-center justify-between w-full mt-3 px-1 text-slate-500">
-                <button 
-                  onClick={handlePrev}
-                  className="p-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer"
-                  aria-label="Poprzednia opinia"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-                <span className="text-[10px] font-mono font-bold text-slate-400">
-                  {activeIndex + 1} / {images.length}
-                </span>
-                <button 
-                  onClick={handleNext}
-                  className="p-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer"
-                  aria-label="Następna opinia"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-
           </div>
 
+        </div>
+
+        {/* Karuzela ze screenami opinii na środku pod sekcją O mnie */}
+        <div className="mt-16 flex justify-center relative z-20">
+          <div className="bg-white border border-orange-100 rounded-2xl p-5 shadow-lg flex flex-col items-center w-full max-w-lg">
+            <div className="flex items-center gap-2 mb-4 self-start">
+              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 block">
+                {"// a teraz dostaję takie wiadomości"}
+                <span className="block mt-0.5">{"od moich kursantów i kursantek <3"}</span>
+              </span>
+            </div>
+
+            {/* Zdjęcie opinii */}
+            <div className="relative w-full aspect-[16/10] bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex items-center justify-center">
+              <Image 
+                src={images[activeIndex]} 
+                alt={`Wiadomość od kursantki ${activeIndex + 1}`} 
+                fill 
+                className="object-contain p-2"
+                sizes="(max-width: 768px) 100vw, 480px"
+              />
+            </div>
+
+            {/* Nawigacja w karuzeli */}
+            <div className="flex items-center justify-between w-full mt-4 px-1 text-slate-500">
+              <button 
+                onClick={handlePrev}
+                className="p-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer"
+                aria-label="Poprzednia opinia"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <span className="text-[10px] font-mono font-bold text-slate-400">
+                {activeIndex + 1} / {images.length}
+              </span>
+              <button 
+                onClick={handleNext}
+                className="p-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer"
+                aria-label="Następna opinia"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         </div>
 
         <hr className="border-orange-200 my-16" />
