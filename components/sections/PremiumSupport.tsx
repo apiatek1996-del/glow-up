@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Sparkles, Check } from "lucide-react";
 
 export default function PremiumSupport() {
@@ -14,9 +15,30 @@ export default function PremiumSupport() {
               <Sparkles className="w-3.5 h-3.5" />
               Wsparcie Premium
             </span>
-            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white mb-4 leading-snug">
-              Chcesz wdrażać zalecenia pod moim okiem?
-            </h2>
+
+            {/* Nagłówek z dymkiem Agaty */}
+            <div className="flex items-center gap-5 mb-4">
+              {/* Awatar z dymkiem */}
+              <div className="relative shrink-0">
+                {/* Dymek */}
+                <div className="absolute -top-7 left-1/2 -translate-x-1/2 bg-purple-400 text-white text-[11px] font-extrabold px-3 py-1 rounded-full whitespace-nowrap shadow-md z-10">
+                  Hola! 👋
+                </div>
+                {/* Zdjęcie w kółku */}
+                <div className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg bg-warm-orange">
+                  <Image
+                    src="/images/hola-tu-agata.png"
+                    alt="Agata"
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+              </div>
+
+              <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-snug">
+                Chcesz wdrażać zalecenia pod moim okiem?
+              </h2>
+            </div>
             <p className="text-white/95 font-semibold text-sm md:text-base leading-relaxed mb-6">
               Wybierając pakiet **Glow Up Premium** otrzymujesz 3 miesiące pełnego wsparcia we wdrażaniu zaleceń. 
               Nie zostajesz sama ze swoimi zmianami – możesz konsultować każdą wątpliwość bezpośrednio w aplikacji, bez limitu pytań.
