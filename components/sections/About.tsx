@@ -49,7 +49,7 @@ export default function About() {
           <div className="lg:col-span-7 relative flex justify-center lg:justify-start">
             <div className="absolute top-4 left-4 w-72 h-72 bg-pink-100 rounded-full blur-3xl opacity-50 -z-10"></div>
             
-            <div className="relative w-full max-w-[580px] aspect-[4/3] rounded-2xl overflow-hidden border-[6px] border-white shadow-2xl bg-slate-100">
+            <div className="relative w-full max-w-[580px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-slate-100">
               <Image 
                 src="/images/hola-tu-agata.png" 
                 alt="Agata Piątek – Hola! Tu Agata" 
