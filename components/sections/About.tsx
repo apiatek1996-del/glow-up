@@ -43,7 +43,7 @@ export default function About() {
       <div className="max-w-6xl px-6 mx-auto relative z-10">
         
         {/* Górna część - O mnie & Dowody (Zdjęcie po lewej 6/12, Tekst po prawej 6/12) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
           
           {/* Lewa strona - Zdjęcie (6 z 12) */}
           <div className="lg:col-span-6 relative flex justify-center lg:justify-start">
@@ -62,12 +62,8 @@ export default function About() {
           </div>
 
           {/* Prawa strona - Teksty i Dowody (6 z 12) */}
-          <div className="lg:col-span-6 flex flex-col justify-center text-left">
+          <div className="lg:col-span-6 flex flex-col justify-start text-left">
             
-            <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-slate-900 mb-8 leading-tight">
-              Cześć, jestem Agata!
-            </h2>
-
             {/* Siatka osiągnięć - białe karty na kremowym tle */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {credentials.map((cred, idx) => (
