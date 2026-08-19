@@ -24,7 +24,7 @@ export default function Hero() {
             </h1>
             
             <p className="text-lg md:text-xl text-slate-500 font-medium leading-relaxed mb-6">
-              Sprawdź, co blokuje Twój hiszpański i zacznij wykorzystywać to, czego już się nauczyłaś.
+              Sprawdź, co blokuje Twój hiszpański i zacznij wykorzystywać swobodnie to, czego już się nauczyłaś.
             </p>
             
             <div className="space-y-4 mb-8 text-slate-700">
