@@ -101,7 +101,7 @@ export default function About() {
               <div className="flex items-center gap-2 mb-3 self-start">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                 <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400">
-                  Wiadomości od moich kursantek (1 z 400+)
+                  {"// a teraz dostaję takie wiadomości od moich kursantów i kursantek <3"}
                 </span>
               </div>
 
