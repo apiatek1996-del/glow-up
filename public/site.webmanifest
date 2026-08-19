@@ -1,0 +1,21 @@
+{
+  "name": "Ada - Hiszpański od zera do płynności",
+  "short_name": "Ada Hiszpański",
+  "description": "Test diagnostyczny i nauka płynności w języku hiszpańskim.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF8EA",
+  "theme_color": "#E89D4F",
+  "icons": [
+    {
+      "src": "/images/ikona-strony.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/images/ikona-strony.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
