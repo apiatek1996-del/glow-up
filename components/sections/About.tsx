@@ -92,7 +92,7 @@ export default function About() {
               </p>
               
               <p className="font-bold text-slate-900 text-sm pt-2">
-                Ale moja własna droga to nie była miłość od pierwszego wejrzenia:
+                ale moja droga wcale nie była usłana różami...
               </p>
               
               <ul className="space-y-2.5 pl-1">
@@ -173,7 +173,7 @@ export default function About() {
               Samo mieszkanie w Hiszpanii nie uczy automatycznie języka (łatwo zamknąć się w polskiej bańce), a wkuwanie list słówek to strata czasu.
             </p>
             <p className="text-slate-950 font-extrabold text-lg">
-              Wierzę w hiszpański, którego naprawdę używasz — podczas rozmowy z sąsiadem, w urzędzie, przy kawie czy w sklepie.
+              Wierzę, że uczę hiszpańskiego, którego naprawdę używasz — podczas rozmowy z sąsiadem, w urzędzie, przy kawie czy w sklepie.
             </p>
             <p>
               W programie GLOW UP bez owijania w bawełnę diagnozuję Twoje blokady i pokazuję Ci, jak zacząć uczyć się sprytniej, by w końcu zacząć swobodnie rozmawiać.
