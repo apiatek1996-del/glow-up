@@ -42,11 +42,27 @@ export default function About() {
 
       <div className="max-w-6xl px-6 mx-auto relative z-10">
         
-        {/* Górna część - O mnie & Dowody */}
+        {/* Górna część - O mnie & Dowody (Zdjęcie po lewej 7/12, Tekst po prawej 5/12) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
           
-          {/* Lewa strona - 7 z 12 - Teksty i Dowody */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
+          {/* Lewa strona - Zdjęcie zajmujące więcej miejsca (7 z 12) */}
+          <div className="lg:col-span-7 relative flex justify-center lg:justify-start">
+            <div className="absolute top-4 left-4 w-72 h-72 bg-pink-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+            
+            <div className="relative w-full max-w-[580px] aspect-[4/3] rounded-2xl overflow-hidden border-[6px] border-white shadow-2xl bg-slate-100">
+              <Image 
+                src="/images/hola-tu-agata.png" 
+                alt="Agata Piątek – Hola! Tu Agata" 
+                fill
+                className="object-cover object-center" 
+                sizes="(max-width: 768px) 100vw, 55vw"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* Prawa strona - Teksty, Dowody i Karuzela (5 z 12) */}
+          <div className="lg:col-span-5 flex flex-col justify-center text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-warm-orange/10 text-warm-orange font-bold text-xs mb-6 w-fit uppercase tracking-wider">
               <Award className="w-3.5 h-3.5" />
               <span>O autorce</span>
@@ -57,47 +73,47 @@ export default function About() {
             </h2>
 
             {/* Siatka osiągnięć - białe karty na kremowym tle */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {credentials.map((cred, idx) => (
                 <div 
                   key={idx} 
-                  className="flex items-center gap-3 bg-white p-4 rounded-xl border border-orange-100 hover:border-warm-orange/20 transition-all shadow-sm"
+                  className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-orange-100 hover:border-warm-orange/20 transition-all shadow-sm"
                 >
                   <div className="w-8 h-8 rounded-lg bg-warm-orange/10 flex items-center justify-center text-warm-orange shrink-0">
                     {cred.icon}
                   </div>
-                  <span className="text-slate-800 font-bold text-xs md:text-sm leading-snug">{cred.text}</span>
+                  <span className="text-slate-800 font-bold text-xs leading-snug">{cred.text}</span>
                 </div>
               ))}
             </div>
 
-            <div className="space-y-4 text-slate-600 font-semibold text-sm md:text-base leading-relaxed">
+            <div className="space-y-4 text-slate-600 font-semibold text-sm leading-relaxed mb-6">
               <p>
                 Dziś mieszkam w Hiszpanii i czuję się tu jak w domu. Pomagam Polakom, którzy już tu są lub planują przeprowadzkę, poczuć dokładnie to samo i swobodnie rozmawiać na co dzień bez stresu.
               </p>
               
-              <p className="font-bold text-slate-900 text-base pt-2">
+              <p className="font-bold text-slate-900 text-sm pt-2">
                 Ale moja własna droga to nie była miłość od pierwszego wejrzenia:
               </p>
               
-              <ul className="space-y-3 pl-1 mb-6">
-                <li className="flex gap-2.5 items-start">
+              <ul className="space-y-2.5 pl-1">
+                <li className="flex gap-2 items-start">
                   <span className="shrink-0 mt-0.5">💔</span>
-                  <p className="text-xs md:text-sm"><strong className="text-slate-900">Nienawiść po licencjacie:</strong> Nudne podręczniki i wkuwanie gramatycznych tabelek prawie zabiły moją pasję do języka.</p>
+                  <p className="text-xs"><strong className="text-slate-900">Nienawiść po licencjacie:</strong> Nudne podręczniki i wkuwanie gramatycznych tabelek prawie zabiły moją pasję do języka.</p>
                 </li>
-                <li className="flex gap-2.5 items-start">
+                <li className="flex gap-2 items-start">
                   <span className="shrink-0 mt-0.5">🗣️</span>
-                  <p className="text-xs md:text-sm"><strong className="text-slate-900">8 lat do pierwszej rozmowy:</strong> W szkole i na studiach nie uczą żywego języka. Sama zaczęłam swobodnie mówić dopiero po 8 latach!</p>
+                  <p className="text-xs"><strong className="text-slate-900">8 lat do pierwszej rozmowy:</strong> W szkole i na studiach nie uczą żywego języka. Sama zaczęłam swobodnie mówić dopiero po 8 latach!</p>
                 </li>
-                <li className="flex gap-2.5 items-start">
+                <li className="flex gap-2 items-start">
                   <span className="shrink-0 mt-0.5">🙈</span>
-                  <p className="text-xs md:text-sm"><strong className="text-slate-900">Erasmusowy wstyd:</strong> Chciałam powiedzieć kilka miłych słów na zajęciach, ale ze stresu nie wykrztusiłam ani jednego słowa przed całą salą. Musiałam dokończyć po angielsku.</p>
+                  <p className="text-xs"><strong className="text-slate-900">Erasmusowy wstyd:</strong> Chciałam powiedzieć kilka miłych słów, ale ze stresu nie wykrztusiłam ani słowa przed całą salą. Musiałam dokończyć po angielsku.</p>
                 </li>
               </ul>
             </div>
 
             {/* Karuzela ze screenami opinii w miejscu cytatu */}
-            <div className="mt-4 bg-white border border-orange-100 rounded-2xl p-4 shadow-md flex flex-col items-center max-w-md">
+            <div className="mt-2 bg-white border border-orange-100 rounded-2xl p-4 shadow-md flex flex-col items-center w-full max-w-md">
               <div className="flex items-center gap-2 mb-3 self-start">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                 <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 block">
@@ -139,21 +155,6 @@ export default function About() {
               </div>
             </div>
 
-          </div>
-
-          {/* Prawa strona - 5 z 12 - Zdjęcie z grafikami w tle */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
-            <div className="absolute top-4 left-4 w-72 h-72 bg-pink-100 rounded-full blur-3xl opacity-50 -z-10"></div>
-            
-            <div className="relative w-full max-w-[400px] aspect-[4/3] rounded-2xl overflow-hidden border-[6px] border-white shadow-2xl bg-slate-100">
-              <Image 
-                src="/images/hola-tu-agata.png" 
-                alt="Agata Piątek – Hola! Tu Agata" 
-                fill
-                className="object-cover object-center" 
-                sizes="(max-width: 768px) 100vw, 40vw"
-              />
-            </div>
           </div>
 
         </div>
