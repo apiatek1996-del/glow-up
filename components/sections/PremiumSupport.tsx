@@ -18,21 +18,14 @@ export default function PremiumSupport() {
 
             {/* Nagłówek z dymkiem Agaty */}
             <div className="flex items-center gap-5 mb-4">
-              {/* Awatar z dymkiem */}
-              <div className="relative shrink-0">
-                {/* Dymek */}
-                <div className="absolute -top-7 left-1/2 -translate-x-1/2 bg-purple-400 text-white text-[11px] font-extrabold px-3 py-1 rounded-full whitespace-nowrap shadow-md z-10">
-                  Hola! 👋
-                </div>
-                {/* Zdjęcie w kółku */}
-                <div className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg bg-warm-orange">
-                  <Image
-                    src="/images/hola-tu-agata.png"
-                    alt="Agata"
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
+              {/* Zdjęcie w kółku */}
+              <div className="relative shrink-0 w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg bg-warm-sun">
+                <Image
+                  src="/images/Ogarnij Hiszpański.jpg"
+                  alt="Agata"
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
 
               <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-snug">
