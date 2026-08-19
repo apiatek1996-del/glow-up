@@ -42,6 +42,13 @@ export default function About() {
 
       <div className="max-w-6xl px-6 mx-auto relative z-10">
         
+        {/* Nagłówek sekcji */}
+        <div className="text-center mb-14">
+          <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-slate-900 leading-tight">
+            Z kim będziesz pracować?
+          </h2>
+        </div>
+
         {/* Górna część - O mnie & Dowody (Zdjęcie po lewej 6/12, Tekst po prawej 6/12) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
           
