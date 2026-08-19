@@ -100,8 +100,9 @@ export default function About() {
             <div className="mt-4 bg-white border border-orange-100 rounded-2xl p-4 shadow-md flex flex-col items-center max-w-md">
               <div className="flex items-center gap-2 mb-3 self-start">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400">
-                  {"// a teraz dostaję takie wiadomości od moich kursantów i kursantek <3"}
+                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 block">
+                  {"// a teraz dostaję takie wiadomości"}
+                  <span className="block mt-0.5">{"od moich kursantów i kursantek <3"}</span>
                 </span>
               </div>
 
