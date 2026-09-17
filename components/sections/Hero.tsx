@@ -29,14 +29,14 @@ export default function Hero() {
             
             <div className="space-y-4 mb-8 text-slate-700">
               <p className="border-l-4 border-primary pl-4 py-1 italic font-semibold text-slate-900 bg-primary/5 rounded-r-xl pr-4">
-                To nie będzie lekcja hiszpańskiego ani kurs – zamiast tego kupujesz:
+                Po sesji dostajesz coś, czego żaden kurs Ci nie da:
               </p>
-              <p className="font-bold text-lg text-slate-900">
-                Diagnoza + indywidualne zalecenia + materiały na pierwszy miesiąc dobrane dla Ciebie
+              <p className="font-bold text-lg text-slate-900 leading-snug">
+                Wiesz dokładnie, co Cię blokuje — co wyczyścić, żeby w pełni korzystać z tego, czego się już nauczyłaś. I dopiero stamtąd iść dalej.
               </p>
               
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-600 font-semibold pt-2">
-                {["60 min konsultacji 1:1", "Indywidualna diagnoza", "Konkretne zalecenia", "Materiały na 1. miesiąc"].map((item, idx) => (
+                {["60 min konsultacji 1:1", "Nazwane blokady", "Konkretny plan działania", "Materiały na 1. miesiąc"].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-2">
                     <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center text-primary">
                       <Check className="w-2.5 h-2.5" />
