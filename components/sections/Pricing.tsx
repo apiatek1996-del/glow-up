@@ -19,18 +19,18 @@ export default function Pricing() {
         {/* Karty cennikowe - układ flex lub grid 2-kolumnowy */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
           
-          {/* Pakiet 1: GLOW UP */}
-          <div className="bg-white border border-orange-100 rounded-2xl p-8 sm:p-10 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          {/* Pakiet 1: GLOW UP — wyróżniony */}
+          <div className="bg-white border-2 border-primary rounded-2xl p-8 sm:p-10 shadow-lg flex flex-col justify-between hover:shadow-xl transition-shadow">
             <div>
               <div className="mb-6">
                 <h3 className="font-heading font-extrabold text-2xl text-slate-900 mb-1">GLOW UP</h3>
-                <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">Diagnoza + plan działania + materiały na pierwszy miesiąc pracy</p>
+                <p className="text-xs text-primary font-bold uppercase tracking-wider">Diagnoza + plan działania + materiały na pierwszy miesiąc pracy</p>
               </div>
 
               {/* Cena */}
               <div className="mb-8 border-y border-orange-100 py-4 font-mono">
                 <span className="text-sm text-slate-400 line-through mr-2 font-medium">347 zł</span>
-                <span className="text-3xl font-extrabold text-slate-900">250 zł</span>
+                <span className="text-3xl font-extrabold text-primary">250 zł</span>
               </div>
 
               {/* Lista korzyści */}
@@ -45,7 +45,7 @@ export default function Pricing() {
                   "BONUS: zniżka na dostęp do platformy szkoleniowej"
                 ].map((item, idx) => (
                   <li key={idx} className="flex gap-3 items-start text-slate-700 font-semibold text-sm">
-                    <Check className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -55,19 +55,16 @@ export default function Pricing() {
             <div>
               <a 
                 href="mailto:a.piatek1996@gmail.com?subject=Chcę zrobić GLOW UP" 
-                className="inline-flex items-center justify-center gap-2 w-full bg-warm-orange hover:bg-warm-orange-hover text-white font-heading font-bold py-4 px-6 rounded-xl transition-all shadow-md cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary-hover text-white font-heading font-bold py-4 px-6 rounded-xl transition-all shadow-md shadow-primary/20 cursor-pointer"
               >
-                <Sparkles className="w-4 h-4 shrink-0" />
+                <Sparkles className="w-4 h-4 shrink-0 animate-pulse" />
                 Chcę zrobić GLOW UP
               </a>
             </div>
           </div>
 
           {/* Pakiet 2: GLOW UP PREMIUM */}
-          <div className="bg-white border-2 border-primary rounded-2xl p-8 sm:p-10 shadow-lg flex flex-col justify-between hover:shadow-xl transition-shadow relative">
-            <div className="absolute top-0 right-6 -translate-y-1/2 bg-primary text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-sm">
-              Najpopularniejszy
-            </div>
+          <div className="bg-white border border-slate-200 rounded-2xl p-8 sm:p-10 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
 
             <div>
               <div className="mb-6">
