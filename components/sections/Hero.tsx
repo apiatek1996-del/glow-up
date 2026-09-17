@@ -47,7 +47,7 @@ export default function Hero() {
               </ul>
             </div>
 
-            <div>
+            <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
               <a 
                 href="#cennik" 
                 className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white text-base font-heading font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 transform hover:-translate-y-0.5"
@@ -55,6 +55,12 @@ export default function Hero() {
                 <Sparkles className="w-5 h-5 shrink-0" />
                 Chcę zrobić GLOW UP mojego hiszpańskiego
                 <ArrowRight className="w-5 h-5 shrink-0" />
+              </a>
+              <a
+                href="#cennik"
+                className="inline-flex items-center justify-center gap-2 bg-warm-orange hover:bg-warm-orange/90 text-white text-base font-heading font-bold py-4 px-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+              >
+                Zobacz pakiety i ceny
               </a>
             </div>
           </div>
