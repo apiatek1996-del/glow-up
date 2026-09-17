@@ -64,8 +64,7 @@ export default function Pricing() {
                   Możesz dokupić stałe wsparcie po sesji — piszesz kiedy chcesz, odpowiedź w 24h.
                 </p>
                 <div className="font-mono">
-                  <span className="text-slate-400 line-through text-xs mr-2">400 zł/mies</span>
-                  <span className="font-extrabold text-primary text-base">320 zł / miesiąc</span>
+                  <span className="font-extrabold text-primary text-base">400 zł / miesiąc</span>
                 </div>
               </div>
             </div>
@@ -92,7 +91,7 @@ export default function Pricing() {
               {/* Cena */}
               <div className="mb-2 border-t border-slate-100 pt-4 font-mono">
                 <span className="text-sm text-slate-400 line-through mr-2 font-medium">1 500 zł</span>
-                <span className="text-3xl font-extrabold text-slate-900">1 200 zł</span>
+                <span className="text-3xl font-extrabold text-primary">1 200 zł</span>
               </div>
               <p className="text-[11px] text-slate-400 font-semibold mb-6 border-b border-slate-100 pb-4">
                 ok. 400 zł / miesiąc przez 3 miesiące wsparcia. Docelowa: 1 500 zł.
