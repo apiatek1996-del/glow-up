@@ -52,7 +52,7 @@ export default function Solution() {
             <div>
               <a 
                 href="#cennik" 
-                className="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold py-3.5 px-6 rounded-xl transition-all shadow-md cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 bg-warm-orange hover:bg-warm-orange/90 text-white font-heading font-bold py-3.5 px-6 rounded-xl transition-all shadow-md cursor-pointer"
               >
                 Zobacz pakiety i ceny
               </a>
