@@ -129,7 +129,7 @@ export default function Pricing() {
               <div className="mb-6">
                 <h3 className="font-heading font-extrabold text-2xl text-slate-900 mb-1">GLOW UP PREMIUM</h3>
                 <p className="text-xs text-primary font-bold uppercase tracking-wider">3 miesiące współpracy</p>
-                <p className="text-sm text-slate-600 mt-3 font-medium">Diagnoza + 3 miesiące opieki + materiały na 4 mies.</p>
+                <p className="text-sm text-slate-600 mt-3 font-medium">Diagnoza + 3 miesiące opieki + materiały na 3 mies.</p>
               </div>
 
               {/* Cena */}
