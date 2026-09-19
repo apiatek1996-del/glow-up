@@ -112,7 +112,9 @@ export default function Pricing() {
 
             <div>
               <a
-                href="mailto:a.piatek1996@gmail.com?subject=Chcę zrobić GLOW UP PLUS"
+                href="https://tidycal.com/ogarnijhiszpanski/glow-up-twojego-hiszpanskiego-plus"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 w-full bg-pink-500 hover:bg-pink-600 text-white font-heading font-bold py-4 px-6 rounded-xl transition-all shadow-md shadow-pink-500/25 cursor-pointer"
               >
                 <Sparkles className="w-4 h-4 shrink-0 animate-pulse" />
@@ -161,7 +163,9 @@ export default function Pricing() {
 
             <div>
               <a
-                href="mailto:a.piatek1996@gmail.com?subject=Chcę GLOW UP PREMIUM"
+                href="https://tidycal.com/ogarnijhiszpanski/glow-up-twojego-hiszpanskiego-premium"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary-hover text-white font-heading font-bold py-4 px-6 rounded-xl transition-all shadow-md shadow-primary/20 cursor-pointer"
               >
                 Chcę GLOW UP PREMIUM
