@@ -32,7 +32,7 @@ export default function Hero() {
                 To nie będzie lekcja hiszpańskiego ani kurs – zamiast tego kupujesz:
               </p>
               <p className="font-bold text-lg text-slate-900">
-                Diagnoza + indywidualne zalecenia + materiały na pierwszy miesiąc dobrane dla Ciebie
+                diagnozę swoich blokad i konkretny plan, żeby zacząć w pełni korzystać z tego, co już umiesz
               </p>
               
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-600 font-semibold pt-2">
