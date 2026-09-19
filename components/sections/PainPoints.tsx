@@ -3,7 +3,7 @@ import { HelpCircle } from "lucide-react";
 const problems = [
   { num: "01", text: "Uczysz się gramatyki z książek, ale w rozmowie słówka wciąż nie chcą same ułożyć się w zdania.", emoji: "📚", align: "left" as const },
   { num: "02", text: "Oglądasz seriale i rozumiesz co mówią, ale sama czujesz paraliż przed odezwaniem się.", emoji: "📺", align: "right" as const },
-  { num: "03", text: "Mieszkasz w Hiszpanii i masz kontakt z językiem, a mimo to nadal czujesz ogromny stres.", emoji: "🇪🇸", align: "left" as const },
+  { num: "03", text: "Mieszkasz w Hiszpanii i masz kontakt z językiem, a mimo to nadal czujesz ogromny stres.", emoji: "🏠", align: "left" as const },
   { num: "04", text: "Zamiast swobodnie mówić — analizujesz każdą końcówkę i tracisz pewność siebie.", emoji: "😬", align: "right" as const },
 ];
 

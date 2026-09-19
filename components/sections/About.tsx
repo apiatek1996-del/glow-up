@@ -8,16 +8,14 @@ export default function About() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const images = [
-    "/images/1.png",
-    "/images/2.png",
-    "/images/4.png",
-    "/images/5.png",
-    "/images/6.png",
-    "/images/7.png",
-    "/images/8.png",
-    "/images/9.png",
-    "/images/10.png",
-    "/images/11.png"
+    "/images/opinia-1.jpg",
+    "/images/opinia-2.jpg",
+    "/images/opinia-3.jpg",
+    "/images/opinia-4.jpg",
+    "/images/opinia-5.jpg",
+    "/images/opinia-6.jpg",
+    "/images/opinia-7.jpg",
+    "/images/opinia-8.jpg",
   ];
 
   const handlePrev = () => {
