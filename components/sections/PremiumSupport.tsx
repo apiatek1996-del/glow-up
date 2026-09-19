@@ -54,18 +54,29 @@ export default function PremiumSupport() {
             <h4 className="font-extrabold text-slate-900 text-xs uppercase tracking-wider mb-2 font-mono text-center border-b border-slate-100 pb-2">
               // SZYBKI WYBÓR
             </h4>
-            <div className="space-y-3.5 text-xs text-slate-600 font-semibold leading-relaxed">
+            <div className="space-y-3 text-xs text-slate-600 font-semibold leading-relaxed">
               <p className="flex items-start gap-2">
-                <strong className="text-primary shrink-0">GLOW UP</strong> 
-                <span>→ diagnoza + plan i kierunek + dopasowane materiały</span>
+                <strong className="text-primary shrink-0 w-16">GLOW UP</strong> 
+                <span>→ diagnoza + plan i materiały</span>
               </p>
-              <div className="border-t border-slate-100 pt-3">
+              
+              <div className="border-t border-slate-100 pt-2.5">
                 <p className="flex items-start gap-2">
-                  <strong className="text-primary shrink-0">PREMIUM</strong> 
+                  <strong className="text-pink-500 shrink-0 w-16">PLUS</strong> 
+                  <span>→ diagnoza + plan i materiały</span>
+                </p>
+                <p className="pl-18 text-[11px] text-pink-500 font-bold mt-0.5 ml-18">
+                  + 1 miesiąc opieki i wdrożenia
+                </p>
+              </div>
+
+              <div className="border-t border-slate-100 pt-2.5">
+                <p className="flex items-start gap-2">
+                  <strong className="text-primary shrink-0 w-16">PREMIUM</strong> 
                   <span>→ diagnoza + plan</span>
                 </p>
-                <p className="pl-16 text-[11px] text-primary font-bold mt-1">
-                  + 3 miesiące asysty na żywo
+                <p className="pl-18 text-[11px] text-primary font-bold mt-0.5 ml-18">
+                  + 3 miesiące opieki i materiałów
                 </p>
               </div>
             </div>
