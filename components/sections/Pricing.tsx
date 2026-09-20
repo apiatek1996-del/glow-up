@@ -9,7 +9,7 @@ export default function Pricing() {
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <span className="text-xs font-bold uppercase tracking-widest text-primary block mb-3">// WYBÓR INWESTYCJI</span>
           <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-slate-900 mb-6 leading-tight">
-            Nie kupujesz kolejnego kursu. Kupujesz jasność, co robić dalej, żeby widzieć efekty swojej pracy.
+            Nie kupujesz kolejnego kursu. Kupujesz <span className="text-pink-500">jasność, co robić dalej, żeby widzieć efekty</span> swojej pracy.
           </h2>
           <p className="text-slate-500 font-semibold text-base md:text-lg">
             Wybierz poziom wsparcia dopasowany do Twoich planów językowych:
