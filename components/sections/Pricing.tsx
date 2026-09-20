@@ -134,11 +134,11 @@ export default function Pricing() {
 
               {/* Cena */}
               <div className="mb-2 border-t border-orange-100 pt-4 font-mono">
-                <span className="text-sm text-slate-400 line-through mr-2 font-medium">1 200 zł</span>
+                <span className="text-sm text-slate-400 line-through mr-2 font-medium">1 220 zł</span>
                 <span className="text-3xl font-extrabold text-primary">980 zł</span>
               </div>
               <p className="text-[11px] text-green-600 font-bold mb-6 border-b border-orange-100 pb-4">
-                Oszczędzasz 220 zł! (względem 3 mies. Plus). Tylko do końca roku.
+                Oszczędzasz 240 zł! (względem 3 mies. Plus). Tylko do końca roku.
               </p>
 
               {/* Lista korzyści */}

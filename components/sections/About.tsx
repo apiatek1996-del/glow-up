@@ -12,7 +12,7 @@ export default function About() {
     "/images/opinia-2.jpg",
     "/images/opinia-3.jpg",
     "/images/opinia-4.jpg",
-    "/images/opinia-5.jpg",
+    "/images/opinia-malaga.jpg",
     "/images/opinia-6.jpg",
     "/images/opinia-7.jpg",
     "/images/opinia-8.jpg",

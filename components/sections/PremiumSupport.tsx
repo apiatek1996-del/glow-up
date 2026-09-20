@@ -83,6 +83,20 @@ export default function PremiumSupport() {
           </div>
 
         </div>
+
+        {/* Opinia kursanta pod sekcją */}
+        <div className="mt-10 md:mt-12 flex flex-col items-center justify-center">
+          <div className="max-w-md w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30 rotate-[-1deg] hover:rotate-0 transition-transform duration-300">
+            <Image
+              src="/images/opinia-program.jpg"
+              alt="Opinia kursanta o programie"
+              width={500}
+              height={220}
+              className="w-full h-auto object-contain bg-black"
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   );
